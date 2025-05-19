@@ -1,5 +1,5 @@
 ---
-title: "How to import ArcGIS flow direction into GRASS GIS"
+title: "How to import ArcGIS flow direction into GRASS"
 author: "Huidae Cho"
 date: 2022-03-25
 date-modified: today
@@ -22,7 +22,7 @@ highlight-style: github
 execute:
   eval: false
 ---
-As shown in Figure 1, ArcGIS uses powers of two to represent the flow direction starting with 2⁰ from East in the clockwise direction. Figure 2 shows how the [`r.watershed`](https://grass.osgeo.org/grass-stable/manuals/r.watershed.html) module in GRASS GIS encodes similar information in a raster map. This module measures the aspect of each cell in the counter-clockwise direction from East and divides the aspect angle by 45 so that East becomes 8, which is 8×45°=360°. East is not 0 because this module uses 0 to indicate depression areas.
+As shown in Figure 1, ArcGIS uses powers of two to represent the flow direction starting with 2⁰ from East in the clockwise direction. Figure 2 shows how the [`r.watershed`](https://grass.osgeo.org/grass-stable/manuals/r.watershed.html) module in GRASS encodes similar information in a raster map. This module measures the aspect of each cell in the counter-clockwise direction from East and divides the aspect angle by 45 so that East becomes 8, which is 8×45°=360°. East is not 0 because this module uses 0 to indicate depression areas.
 
 ::: columns
 :::: {.column withd="50%"}
@@ -31,15 +31,15 @@ As shown in Figure 1, ArcGIS uses powers of two to represent the flow direction 
 ::::
 :::: {.column withd="50%"}
 ![grass-fdr](images/grass-fdr.svg)  
-**Figure 2**: GRASS GIS drainage encoding
+**Figure 2**: GRASS drainage encoding
 ::::
 :::
 
-Using this information, you can import the flow direction raster from ArcGIS into GRASS GIS and convert it to the drainage raster.
+Using this information, you can import the flow direction raster from ArcGIS into GRASS and convert it to the drainage raster.
 
 1. In ArcGIS, right click on the flow direction layer (fdr) → Data → Export Data  
 2. Export fdr as GeoTiff (TIFF format). Output filename `fdr.tif` in this example.
-3. In GRASS GIS, import `fdr.tif` first:
+3. In GRASS, import `fdr.tif` first:
   ```bash
   r.in.gdal input=fdr.tif output=fdr
   ```

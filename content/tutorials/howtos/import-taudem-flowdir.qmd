@@ -1,5 +1,5 @@
 ---
-title: "How to import TauDEM D8 direction into GRASS GIS"
+title: "How to import TauDEM D8 direction into GRASS"
 author: "Huidae Cho"
 date: 2022-03-25
 date-modified: today
@@ -27,10 +27,10 @@ TauDEM D8 direction (`d8`) uses the following encoding:
 ![taudem-fdr](images/taudem-fdr.svg)  
 **Figure 1**: TauDEM D8 encoding
 
-This is GRASS GIS drainage (`drain`) encoding:
+This is GRASS drainage (`drain`) encoding:
 
 ![grass-fdr](images/grass-fdr.svg)  
-**Figure 2**: GRASS GIS drainage encoding
+**Figure 2**: GRASS drainage encoding
 
 ```bash
 # import D8

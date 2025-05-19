@@ -1,5 +1,5 @@
 ---
-title: "How to fill no data cells in a raster map in GRASS GIS"
+title: "How to fill no data cells in a raster map in GRASS"
 author: "Huidae Cho"
 date: 2022-03-25
 date-modified: today

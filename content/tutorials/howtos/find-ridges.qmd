@@ -1,5 +1,5 @@
 ---
-title: "How to find ridges from a drainage direction map in GRASS GIS"
+title: "How to find ridges from a drainage direction map in GRASS"
 author: "Huidae Cho"
 date: 2022-03-25
 date-modified: today

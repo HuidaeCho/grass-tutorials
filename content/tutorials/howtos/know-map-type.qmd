@@ -1,5 +1,5 @@
 ---
-title: "How to know the map type of a GRASS GIS archive file"
+title: "How to know the map type of a GRASS archive file"
 author: "Huidae Cho"
 date: 2022-03-25
 date-modified: today
@@ -22,7 +22,7 @@ highlight-style: github
 execute:
   eval: false
 ---
-GRASS GIS provides the [`r.pack`](https://grass.osgeo.org/grass-stable/manuals/r.pack.html) and [`v.pack`](https://grass.osgeo.org/grass-stable/manuals/v.pack.html) modules that we can use to export raster and vector maps, respectively, to archive files in the .pack extension. However, unless we specify the map type explicitly in the output parameter, there is no way to know which type an archive file is for without trying [`r.pack`](https://grass.osgeo.org/grass-stable/manuals/r.pack.html) or [`v.pack`](https://grass.osgeo.org/grass-stable/manuals/v.pack.html) first. These modules will tell us which type the archive file is for. What if we don’t have access to GRASS GIS for whatever reason?
+GRASS provides the [`r.pack`](https://grass.osgeo.org/grass-stable/manuals/r.pack.html) and [`v.pack`](https://grass.osgeo.org/grass-stable/manuals/v.pack.html) modules that we can use to export raster and vector maps, respectively, to archive files in the .pack extension. However, unless we specify the map type explicitly in the output parameter, there is no way to know which type an archive file is for without trying [`r.pack`](https://grass.osgeo.org/grass-stable/manuals/r.pack.html) or [`v.pack`](https://grass.osgeo.org/grass-stable/manuals/v.pack.html) first. These modules will tell us which type the archive file is for. What if we don’t have access to GRASS for whatever reason?
 
 Pack files are actually `.tar.gz` files, so we can use `tar` to look into the list of contents in a pack file without uncompressing it.
 
